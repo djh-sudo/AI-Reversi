@@ -33,7 +33,7 @@ h3 {
 	margin: 0px 20px;
 	color: #330000;
 	font-size: 25px;
-	line-height: 30px;
+	line-height: 40px;
 	font-weight: bold;
 	text-shadow: 0px 0px 4px #A33D1B, 0px 5px 2px #754B35;
 }
@@ -68,7 +68,7 @@ h3 {
 
 .cbox {
 	border: 4px solid transparent;
-	border-radius: 12px;
+	border-radius: 13px;
 	width: 100px;
 	height: 60px;
 }
@@ -175,28 +175,6 @@ h3 {
 	background: #FFCC33;
 }
 
-#selectbox {
-	position: absolute;
-	top: 50px;
-	left: 50%;
-	margin-left: -220px;
-	width: 330px;
-	height: auto;
-	background: #DBA977;
-	border: 3px solid #98472C;
-	border-width: 3px 30px;
-	box-shadow: 0px 5px 15px #482915;
-	padding: 10px 25px;
-	color: #472E25;
-	font-size: 28px;
-	line-height: 45px;
-	display: none;
-}
-#selectbox input:checked + span {
-	color: #990000;
-	text-shadow: 0px 0px 3px #FF9900;
-}
-
 #buttons {
 	margin: 0px 40px;
 }
@@ -212,7 +190,7 @@ h3 {
 	font-size: 18px;
 }
 
-#pass, #airuning {
+#pass {
 	position: absolute;
 	top: 12px;
 	left: 50%;
@@ -227,11 +205,6 @@ h3 {
 	color: #330000;
 	text-shadow: 0px 0px 3px #900;
 	display: none;
-}
-#airuning {
-	top: 500px;
-	margin-left: -100px;
-	width: 200px;
 }
 
 @media screen and (max-width: 750px) {
