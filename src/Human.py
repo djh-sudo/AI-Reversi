@@ -129,14 +129,16 @@ class PlayOnline(object):
                     "available": None,
                     "is_end": None,
                     "who_win": None,
-                    "turn": None}
+                    "turn": None,
+                    "point": None}
         self.is_end, self.who_win = self.board.game_end()
         return {"error": self.has_error,
                 "board": self.board.status.flatten().tolist(),
                 "available": self.board.available,
                 "is_end": self.is_end,
                 "who_win": self.who_win,
-                "turn": self.board.current_player}
+                "turn": self.board.current_player,
+                "point": str(point)}
 
 
 if __name__ == '__main__':
