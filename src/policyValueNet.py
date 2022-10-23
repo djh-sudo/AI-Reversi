@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-need Tensorflow 1.5
+need Tensorflow 1.15
 using CNN to evaluate board
 Thanks to the open source project!
 https://github.com/junxiaosong/AlphaZero_Gomoku
@@ -10,7 +10,7 @@ Also See
 If you have any question, pls contact me
 at djh113@126.com
 """
-import os
+
 import numpy as np
 import tensorflow as tf
 
