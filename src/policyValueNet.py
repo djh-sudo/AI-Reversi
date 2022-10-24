@@ -63,7 +63,7 @@ class ValueNet(object):
         # Full Connection 2
         # the score of evaluation on current state
         self.evaluation_fc2 = tf.layers.dense(inputs=self.evaluation_fc1,
-                                                  units=1, activation=tf.nn.tanh)
+                                              units=1, activation=tf.nn.tanh)
         # Label: win or not
         self.labels = tf.placeholder(tf.float32, shape=[None, 1])
 
@@ -93,7 +93,7 @@ class ValueNet(object):
 
         # calc policy entropy, for monitoring only
         self.entropy = tf.negative(tf.reduce_mean(
-                tf.reduce_sum(tf.exp(self.action_fc) * self.action_fc, 1)))
+            tf.reduce_sum(tf.exp(self.action_fc) * self.action_fc, 1)))
         tf.summary.scalar('entropy', self.entropy)
         # Initialize variables
         init = tf.global_variables_initializer()
