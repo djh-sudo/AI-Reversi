@@ -54,7 +54,7 @@ def two_human_run():
 
 
 def play_with_AI(model_path: str):
-    assert os.path.exists(model_path), 'Invalid model path!'
+    # assert os.path.exists(model_path), 'Invalid model path!'
     width, height = 8, 8
     board = Board(width, height)
     game = Game(board)

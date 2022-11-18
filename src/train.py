@@ -72,7 +72,9 @@ class Train(object):
     def collect_data(self, game_num=1):
         for i in range(game_num):
             winner, play_data = self.game.start_self_play(self.mcts_player, p=self.tmp, shown=False)
+            # convert to list
             play_data = list(play_data)[:]
+            # total step used
             self.episode = len(play_data)
             play_data = self.get_extend_data(play_data)
             self.data_buffer.extend(play_data)
