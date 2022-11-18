@@ -25,5 +25,5 @@ def restart():
 
 
 if __name__ == '__main__':
-    player.init('../model/best_13_policy_model')
+    player.init('../model/best_94_policy_model')
     app.run(host='127.0.0.1', port=8877, debug=True)

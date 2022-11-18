@@ -37,9 +37,9 @@ class Train(object):
         self.epochs = 5
         self.kl_target = 0.02
         self.check = 50
-        self.game_number = 15000
+        self.game_number = 150000
         self.win_ratio = 0.0
-        self.mcts_play_num = 6
+        self.mcts_play_num = 20
         if model:
             self.policy_val_net = ValueNet(self.width, self.height, model)
         else:
@@ -141,8 +141,8 @@ class Train(object):
                         self.win_ratio = win_ratio
                         # update the best policy
                         self.policy_val_net.save_model('./best_{}_policy_model'.format(self.mcts_play_num))
-                        if win_ratio >= 0.90 and self.mcts_play_num <= 30:
-                            self.mcts_play_num += 2
+                        if win_ratio >= 0.90 and self.mcts_play_num <= 300:
+                            self.mcts_play_num += 10
                             self.win_ratio = 0.0
         except KeyboardInterrupt:
             print('quit by user')
