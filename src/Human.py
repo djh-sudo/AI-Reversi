@@ -64,7 +64,7 @@ def play_with_AI(model_path: str):
     # Human
     human = Human()
     # start play
-    game.start_play(human, mcts_player_AI, shown=True)
+    game.start_play(mcts_player_AI, human, shown=True, start_player=1)
 
 
 class PlayOnline(object):
@@ -143,6 +143,6 @@ class PlayOnline(object):
 
 if __name__ == '__main__':
     # two_human_run()
-    play_with_AI('./model/best_13_policy_model')
+    play_with_AI('./model/best_94_policy_model')
 
 
